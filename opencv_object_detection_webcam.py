@@ -29,7 +29,7 @@ while True:
 
     frame = cv2.flip(frame, 1)
 
-    class_index, confidence, bbox = model.detect(frame, confThreshold=0.4)
+    class_index, confidence, bbox = model.detect(frame, confThreshold=0.5)
 
     # Drawing bounding boxes and labels
     if len(class_index) != 0:
