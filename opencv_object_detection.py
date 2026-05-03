@@ -31,6 +31,7 @@ while True:
 
     class_index, confidence, bbox = model.detect(frame, confThreshold=0.7)
 
+    # Drawing bounding boxes and labels
     if len(class_index) != 0:
 
         font_scale = 3
@@ -55,7 +56,7 @@ while True:
                     thickness=2
                 )
 
-    cv2.imshow('Video Capture', frame)
+    cv2.imshow('Object Detection', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
