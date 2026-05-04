@@ -64,6 +64,7 @@ options = vision.HandLandmarkerOptions(base_options=base_options,
                                        num_hands=2)
 detector = vision.HandLandmarker.create_from_options(options)
 
+# Webcam input loop
 while True:
     success, frame = capture.read()
     frame = cv2.flip(frame, 1)
